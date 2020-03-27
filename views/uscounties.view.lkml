@@ -1,9 +1,10 @@
 view: uscounties {
   sql_table_name: covid.`us-counties` ;;
 
-  dimension: cases {
-    type: number
+  measure: cases {
+    type: sum
     sql: ${TABLE}.cases ;;
+    drill_fields: [date, county]
   }
 
   dimension: county {
@@ -16,9 +17,10 @@ view: uscounties {
     sql: ${TABLE}.date ;;
   }
 
-  dimension: deaths {
-    type: number
+  measure: deaths {
+    type: sum
     sql: ${TABLE}.deaths ;;
+    drill_fields: [date, county]
   }
 
   dimension: fips {
