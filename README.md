@@ -1,3 +1,5 @@
+Forked from: https://github.com/nytimes/covid-19-data
+
 # Coronavirus (Covid-19) Data in the United States
 
 [ [U.S. State-Level Data](us-states.csv) | [U.S. County-Level Data](us-counties.csv) ]
