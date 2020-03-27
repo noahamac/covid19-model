@@ -22,7 +22,7 @@ view: uscounties {
   }
 
   dimension: fips {
-    type: string
+    map_layer_name: us_counties_fips
     sql: ${TABLE}.fips ;;
   }
 
@@ -31,8 +31,4 @@ view: uscounties {
     sql: ${TABLE}.state ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
-  }
 }

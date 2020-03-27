@@ -11,8 +11,7 @@ datagroup: covid_default_datagroup {
 persist_with: covid_default_datagroup
 
 explore: usstates {
-  join: uscounties {
-    sql_on: ${usstates.date} = ${uscounties.date} ;;
-    relationship: many_to_many
-  }
+
 }
+
+explore: uscounties {}

@@ -1,8 +1,8 @@
 view: usstates {
   sql_table_name: covid.`us-states` ;;
 
-  dimension: cases {
-    type: number
+  measure: cases {
+    type: sum
     sql: ${TABLE}.cases ;;
   }
 
@@ -17,7 +17,7 @@ view: usstates {
   }
 
   dimension: fips {
-    type: string
+    map_layer_name: us_counties_fips
     sql: ${TABLE}.fips ;;
   }
 
@@ -26,8 +26,4 @@ view: usstates {
     sql: ${TABLE}.state ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
-  }
 }
